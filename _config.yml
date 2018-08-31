@@ -15,6 +15,7 @@ color:
   navbar-blog: "#E4C3F4"
   post-subhead: "#E4C3F4"
   text: "#FFFFFF"
+  code-block: "#49483E"
 
 fonts:
   main: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
@@ -56,8 +57,14 @@ social:
     url: https://github.com/cczhu/
 
 # Build settings
-markdown: kramdown
-permalink: pretty
+permalink: /:year-:month-:day-:title/
+ymarkdown: kramdown
+
+# Syntax highlighter
+highlighter: rouge
+
+kramdown:
+  input: GFM
 
 # Paginator settings
 paginate: 5
@@ -74,7 +81,7 @@ defaults:
       social-share: true # add social media sharing buttons to all blog posts
 
 # Use tags index page and make tags on each post clickable
-link-tags: true
+link-tags: false
 
 # Exclude these files from production site
 exclude:

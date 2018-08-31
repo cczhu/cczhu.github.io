@@ -37,7 +37,7 @@ layout: base
         {{ content }}
       </article>
 
-      {% if page.tags.size > 0 %}
+      {% if page.tags.size > 0 and site.link-tags %}
         <div class="blog-tags">
           Tags:
           {% if site.link-tags %}
