@@ -9,7 +9,8 @@ body {
     width: 100%;
     height: 100%;
     font-family: {{ site.fonts.main }};
-    color: #fff;
+    font-weight: 400;
+    color: {{ site.color.text }};
     background-color: {{ site.color.primary-dark }};
 }
 
@@ -28,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -178,10 +178,6 @@ a:focus {
 
 /* --- Post and page headers (from beautifuljekyll) --- */
 
-.intro-header {
-  margin: 80px 0 20px;
-  position: relative;
-}
 .intro-header .post-heading h1 {
   margin-top: 140px;
   font-size: 35px;
@@ -189,24 +185,20 @@ a:focus {
 .intro-header .post-heading .post-subheading {
   font-size: 20px;
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   margin: 20px 0 0;
   margin-bottom: 20px;
 }
 .intro-header .post-heading .post-meta {
   color: {{ site.color.post-subhead }};
-  font-size: 18px;
+  font-size: 17px;
   font-style: italic;
   margin: 100px 0 10px;
 }
 
 @media only screen and (min-width: 767px) {
-  .intro-header {
-    margin-top: 120px;
-    width: 100%;
-  }
   .intro-header .post-heading h1 {
-    margin-top: 140px;
+    margin-top: 120px;
     font-size: 45px;
   }
   .intro-header .post-heading .post-subheading {
@@ -229,7 +221,8 @@ a:focus {
   background-repeat: no-repeat;
   background-size: auto;
   background-size: cover;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
 .header-section.has-img .intro-header.no-img {
@@ -252,6 +245,34 @@ a:focus {
 }
 
 /*================================================*/
+
+
+/*============= BLOGPOST PARAGRAPH =================*/
+
+.blog-post p {
+    margin: 0 0 25px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media(min-width:767px) {
+    .blog-post p {
+        margin: 0 0 35px;
+    }
+}
+
+/*===================================================*/
+
+#header-gh-btns {
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 500px) {
+  #header-gh-btns > iframe {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
 
 @media(min-width:767px) {
     .intro {
@@ -381,7 +402,7 @@ a:focus {
 
 .btn {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: {{ site.fonts.headers }};
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -400,6 +421,10 @@ a:focus {
     outline: 0;
     color: {{ site.color.primary-dark }};
     background-color: {{ site.color.links }};
+}
+
+.tag-btn {
+  margin: 5px;
 }
 
 ul.banner-social-buttons {
@@ -458,4 +483,50 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+/* --- Blog Tags --- */
+
+.blog-tags {
+  font-family: {{ site.fonts.main }};
+  color: #999;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.blog-tags a {
+  color: {{ site.link-col }};
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.blog-tags a:hover {
+  border-radius: 2px;
+  color: {{ site.hover-col }};
+  background-color: #EEE;
+}
+
+.post-preview .blog-tags {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .post-preview .blog-tags {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post-image, .post-image img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .post-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    float: left;
+  }
 }
