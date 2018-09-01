@@ -90,6 +90,7 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - jekyll_notes.md
 
 # Plugins
 plugins:

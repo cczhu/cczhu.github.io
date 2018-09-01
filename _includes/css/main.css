@@ -160,7 +160,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(/img/ARO.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -193,10 +193,10 @@ a:focus {
 
 .intro-header .post-heading h1 {
   margin-top: 140px;
-  font-size: 35px;
+  /*font-size: 35px;*/
 }
 .intro-header .post-heading .post-subheading {
-  font-size: 20px;
+  /*font-size: 20px;*/
   display: block;
   font-weight: 400;
   margin: 20px 0 0;
@@ -212,10 +212,10 @@ a:focus {
 @media only screen and (min-width: 767px) {
   .intro-header .post-heading h1 {
     margin-top: 120px;
-    font-size: 45px;
+    /*font-size: 45px;*/
   }
   .intro-header .post-heading .post-subheading {
-    font-size: 25px;
+    /*font-size: 25px;*/
     margin: 5px 0 0;
     margin-bottom: 20px;
   }
@@ -227,6 +227,9 @@ a:focus {
   margin: 0 0 40px;
   padding: 20px 0;
   box-shadow: 0 0 5px #AAA;
+}
+.header-section.has-img {
+  text-shadow: 1px 1px 3px #000;
 }
 .header-section .intro-header {
   margin-top: 0px;
@@ -264,13 +267,14 @@ a:focus {
 
 .blog-post p {
     margin: 0 0 25px;
-    font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
 }
 
 @media(min-width:767px) {
     .blog-post p {
+        font-size: 17px;
+        line-height: 1.6;
         margin: 0 0 35px;
     }
 }
@@ -625,7 +629,8 @@ pre.highlight, .highlight > pre, td.code pre {
   background-repeat: repeat;
   background-size: 3em 3em;
   background-position: 0px 10px;
-  border-left: 7px solid #444;
+  border-width: 0;
+  border-left: 7px solid #222;
 }
 code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
@@ -640,9 +645,9 @@ td.gutter pre {
   padding: 9.5px;
 }
 td.code pre {
-  border-width: 0 0 0 2px;
+  border-width: 0 0 0 1px;
   border-style: solid;
-  border-color: #444;
+  border-color: #222;
   border-radius: 0;
   color: {{ site.color.text }};
 }
