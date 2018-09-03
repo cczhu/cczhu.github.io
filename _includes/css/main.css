@@ -20,7 +20,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 35px;
+    /*margin: 0 0 35px;*/
     text-transform: uppercase;
     font-family: {{ site.fonts.headers }};
     letter-spacing: -1px;
@@ -32,7 +32,7 @@ p {
     line-height: 1.5;
 }
 
-@media(min-width:767px) {
+@media(min-width: 768px) {
     p {
         margin: 0 0 35px;
         font-size: 20px;
@@ -51,6 +51,14 @@ a:hover,
 a:focus {
     text-decoration: none;
     color: #11505d;
+}
+
+hr.small {
+  max-width: 120px;
+  margin: 18px auto;
+  border-width: 4px;
+  border-color: inherit;
+  border-radius: 3px;
 }
 
 /*From beautifuljekyll - not 100% certain what it does, other than allow highlighting code blocks*/
@@ -72,7 +80,7 @@ a:focus {
 
 /* --- Navbar --- */
 
-.navbar-custom {
+.navbar {
     margin-bottom: 0;
     border-bottom: 0px solid rgba(255,255,255,.3);
     text-transform: uppercase;
@@ -80,42 +88,42 @@ a:focus {
     background-color: {{ site.color.navbar }};
 }
 
-.navbar-custom .navbar-brand {
+.navbar .navbar-brand {
     font-size: 20px;
     font-weight: 700;
     color: {{ site.color.navbar-title }};
 }
 
-.navbar-custom .navbar-brand:focus {
+.navbar .navbar-brand:focus {
     outline: 0;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
+.navbar .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
     color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
+.navbar .navbar-brand .navbar-toggle:focus,
+.navbar .navbar-brand .navbar-toggle:active {
     outline: 0;
 }
 
-.navbar-custom a {
+.navbar a {
     color: #fff;
 }
 
 /*Doesn't seem to format correctly.
-.navbar-custom .nav li.blog a {
+.navbar .nav li.blog a {
   color: {{ site.color.navbar-blog }};
 }*/
 
-.navbar-custom .nav li.active {
+.navbar .nav li.active {
     outline: none;
     background-color: rgba(79, 191, 255, .2);
 }
 
-.navbar-custom .nav li a {
+.navbar .nav li a {
     font-family: {{ site.fonts.navbar }};
     color: {{ site.color.navbar-text }};
     font-size: 14px;
@@ -126,37 +134,35 @@ a:focus {
     transition: background .3s ease-in-out;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a.active {
+.navbar .nav li a:hover,
+.navbar .nav li a:focus,
+.navbar .nav li a.active {
     outline: 0;
     color: {{ site.color.navbar-title }};
     background-color: rgba(79, 191, 255, .2);
 }
 
-@media(min-width:1024px) {
+@media(min-width: 768px) {
     .navbar {
         padding: 20px 0;
         border-bottom: 0;
         letter-spacing: 1px;
-        background: 0 0;
+        background: 0 0;  /*{{ site.color.navbar }}*/
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
-
     .top-nav-collapse {
         padding: 0;
         background-color: {{ site.color.navbar }};
     }
-
-    .navbar-custom.top-nav-collapse {
+    .navbar.top-nav-collapse {
         border-bottom: 0px solid rgba(255,255,255,.3);
     }
 }
 
 /*https://coderwall.com/p/wpjw4w/change-the-bootstrap-navbar-breakpoint*/
-@media(max-width:1023px) {
+@media(max-width: 1000px) {
     .navbar-header {
         float: none;
     }
@@ -188,7 +194,13 @@ a:focus {
     }
 }
 
-.intro {
+@media(max-width: 400px) {
+    .navbar .navbar-brand {
+      font-size: 18px;
+    }
+}
+
+.homesplash {
     display: table;
     width: 100%;
     height: auto;
@@ -203,92 +215,129 @@ a:focus {
     -o-background-size: cover;
 }
 
-/* Needed so that titles don't overlap with the navbar?? */
-.intro-header {
-  margin: 120px 0 20px;
-  position: relative;
-}
+/*========== Main splash page ============*/
 
-.intro .intro-body {
+.homesplash .home-body {
     display: table-cell;
     vertical-align: middle;
 }
 
-.intro .intro-body .brand-heading {
+.homesplash .home-body .brand-heading {
     font-size: 40px;
 }
 
-.intro .intro-body .intro-text {
+.homesplash .home-body .splash-text {
     font-size: 18px;
 }
 
-/* ========= BLOGPOST HEADERS ========= */
+@media(min-width: 768px) {
+    .homesplash {
+        height: 100%;
+        padding: 0;
+    }
 
-/* --- Post and page headers (from beautifuljekyll) --- */
+    .homesplash .home-body .brand-heading {
+        font-size: 100px;
+    }
 
-.intro-header .post-heading h1 {
-  margin-top: 140px;
-  /*font-size: 35px;*/
-}
-.intro-header .post-heading .post-subheading {
-  /*font-size: 20px;*/
-  display: block;
-  font-weight: 400;
-  margin: 20px 0 0;
-  margin-bottom: 20px;
-}
-.intro-header .post-heading .post-meta {
-  color: {{ site.color.post-subhead }};
-  font-size: 17px;
-  font-style: italic;
-  margin: 100px 0 10px;
+    .homesplash .home-body .splash-text {
+        font-size: 25px;
+    }
 }
 
-@media only screen and (min-width: 767px) {
-  .intro-header .post-heading h1 {
-    margin-top: 120px;
-    /*font-size: 45px;*/
-  }
-  .intro-header .post-heading .post-subheading {
-    /*font-size: 25px;*/
-    margin: 5px 0 0;
-    margin-bottom: 20px;
-  }
-}
+/* ========= PAGE AND BLOGPOST TITLES ========= */
 
-.header-section.has-img .no-img {
-  margin-top: 0;
-  background-color: #FCFCFC;
-  margin: 0 0 40px;
-  padding: 20px 0;
-  box-shadow: 0 0 5px #AAA;
-}
-.header-section.has-img {
-  text-shadow: 1px 1px 3px #000;
-}
-.header-section .intro-header {
-  margin-top: 0px;
+/* --- Post and page headers (adapted from beautifuljekyll) --- */
+
+.intro-header {
+  margin: 0 0 20px;
+  position: relative;
   background-color: {{ site.color.primary-dark }}; /* Used if the image is unavailable */
   background-repeat: no-repeat;
   background-size: auto;
   background-size: cover;
-  padding-bottom: 40px;
+/*  padding-bottom: 40px;
+  margin-bottom: 40px;*/
+}
+.intro-header .page-heading,
+.intro-header .post-heading {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.intro-header .page-heading {
+  text-align: center;
+}
+.intro-header .page-heading h1 {
+  margin-top: 0px;
+  font-size: 45px;
+}
+.intro-header .post-heading h1 {
+  margin-top: 0px;
+  font-size: 35px;
+}
+.intro-header .page-heading .page-subheading,
+.intro-header .post-heading .post-subheading {
+  text-transform: none;
+  line-height: 1.1;
+  font-size: 25px;
+  display: block;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+.intro-header .post-heading .post-subheading {
+  margin-bottom: 20px;
+}
+.intro-header .post-heading .post-meta {
+  color: {{ site.color.post-subhead }};
+  font-size: 15px;
+/*  font-style: italic;
+  margin: 100px 0 10px;*/
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header .page-heading,
+  .intro-header .post-heading {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+  .intro-header .page-heading h1 {
+    font-size: 60px;
+  }
+  .intro-header .post-heading h1 {
+    font-size: 45px;
+  }
+  .intro-header .post-heading .post-meta {
+    font-size: 17px;
+  }
+/*  .intro-header .page-heading .page-subheading
+  .intro-header .post-heading .post-subheading {
+    font-size: 25px;
+    margin: 5px 0 0;
+    margin-bottom: 20px;
+  }*/
+}
+/*handles when header has image banner*/
+.header-section.has-img {
+  text-shadow: 1px 1px 3px #000;
+}
+.header-section.has-img .intro-header {
   margin-bottom: 40px;
+}
+.header-section.has-img .page-heading hr {
+  box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  -moz-box-shadow: 1px 1px 3px #000;
 }
 /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
 .header-section.has-img .intro-header.no-img {
   display: none;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) {
+    .header-section.has-img .intro-header {
+      margin-bottom: 50px;
+    }
     .header-section.has-img .intro-header.no-img {
       display: block;
-    }
-    .intro-header.big-img .post-heading {
-      width: 100%;
-      height: 220px;
-    }
-    .intro-header.big-img .post-heading {
-      display: none;
     }
     .header-section.has-img .big-img {
       margin-bottom: 0;
@@ -306,12 +355,32 @@ a:focus {
     line-height: 1.5;
 }
 
-@media(min-width:767px) {
+@media(min-width: 768px) {
     .blog-post p {
         font-size: 17px;
         line-height: 1.6;
         margin: 0 0 35px;
     }
+}
+
+.blog-post h1 {
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+.blog-post h2 {
+    font-size: 22px;
+}
+
+.blog-post h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+
+@media(min-width: 768px) {
+  .blog-post h1 {
+      font-size: 30px;
+  }
 }
 
 /*===================================================*/
@@ -324,21 +393,6 @@ a:focus {
     display: block;
     margin-bottom: 5px;
   }
-}
-
-@media(min-width:767px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
-    .intro .intro-body .brand-heading {
-        font-size: 100px;
-    }
-
-    .intro .intro-body .intro-text {
-        font-size: 25px;
-    }
 }
 
 .btn-circle {
@@ -437,7 +491,7 @@ a:focus {
     margin-top: 100px;
 }
 
-@media(min-width:767px) {
+@media(min-width: 768px) {
     .content-section {
         padding-top: 200px;
     }
@@ -487,13 +541,13 @@ ul.banner-social-buttons li {
     margin-bottom: 15px;
 }
 
-@media(max-width:1199px) {
+@media(max-width: 1199px) {
     ul.banner-social-buttons {
         margin-top: 15px;
     }
 }
 
-@media(max-width:767px) {
+@media(max-width: 768px) {
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;
@@ -571,18 +625,18 @@ body {
 }
 .post-preview .post-subtitle {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: {{ site.post-subhead-col }};
+  color: {{ site.post-subhead }};
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: {{ site.headers }};
   font-size: 17px;
   font-weight: 400;
 }
@@ -609,7 +663,7 @@ body {
   width: 192px;
 }
 .post-preview .post-read-more {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: {{ site.headers }};
   font-weight: 800;
 }
 
@@ -645,7 +699,7 @@ body {
   margin-bottom: 0;
 }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 768px) {
   .post-preview .blog-tags {
     margin-top: 10px;
   }

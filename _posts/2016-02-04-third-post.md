@@ -9,9 +9,12 @@ In Moulmein, in lower Burma, I was hated by large numbers of people--the
 only time in my life that I have been important enough for this to happen
 to me. I was sub-divisional police officer of the town, and in an
 aimless, petty kind of way anti-European feeling was very bitter. 
-<h1>Shooting the Elephant</h1>
-<h4>By George Orwell</h4>No one
-had the guts to raise a riot, but if a European woman went through the
+
+# Shooting the Elephant
+
+#### By George Orwell
+
+No one had the guts to raise a riot, but if a European woman went through the
 bazaars alone somebody would probably spit betel juice over her dress. As
 a police officer I was an obvious target and was baited whenever it
 seemed safe to do so. When a nimble Burman tripped me up on the football

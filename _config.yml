@@ -15,6 +15,7 @@ color:
   navbar-blog: "#E4C3F4"
   post-subhead: "#E4C3F4"
   text: "#FFFFFF"
+  hover: "#F9CC26"
   code-block: "#49483E"
 
 fonts:
