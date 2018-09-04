@@ -2,6 +2,7 @@
 title: Chenchong Charles Zhu
 email: chenchong.zhu@gmail.com
 url: https://cczhu.github.io
+url-pretty: cczhu.github.io
 baseurl: ""
 description: "Personal website."
 
@@ -13,32 +14,35 @@ color:
   navbar-text: "#4FBFFF"  # hover/focus/active needs rgba, so manually change those to rgba(79, 191, 255, .2)
   navbar-title: "#F9CC26"
   navbar-blog: "#E4C3F4"
+  post-head: "#4FBFFF"
   post-subhead: "#E4C3F4"
   text: "#FFFFFF"
   hover: "#F9CC26"
   code-block: "#49483E"
+  footer: "#1C1A2C"
+  footer-text: "#BBA2C7"
+  footer-link: "#4FBFFF"
 
 fonts:
   main: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif"
   headers: "'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif"
   navbar: "'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
-
-navbar-col: "#1C1A2C" #"#100E1C"
-navbar-border-col: "#FFFFFF"
-navbar-title-col: "#F9CC26"
-navbar-text-col: "#4FBFFF"
-navbar-blog-col: "#E4C3F4"
-navbar-children-col: "#1C1A2C"
-page-col: "#2F2F45" #"#1C1A2C" "#191D2B"
-page-text-col: "#FFFFFF"
-link-col: "#4FBFFF"
-hover-col: "#F9CC26" #"#f97a26"
-post-head-col: "#4FBFFF"
-post-subhead-col: "#BBA2C7"
-footer-col: "#1C1A2C"
-footer-text-col: "#BBA2C7"
-footer-link-col: "#4FBFFF"
+# navbar-col: "#1C1A2C" #"#100E1C"
+# navbar-border-col: "#FFFFFF"
+# navbar-title-col: "#F9CC26"
+# navbar-text-col: "#4FBFFF"
+# navbar-blog-col: "#E4C3F4"
+# navbar-children-col: "#1C1A2C"
+# page-col: "#2F2F45" #"#1C1A2C" "#191D2B"
+# page-text-col: "#FFFFFF"
+# link-col: "#4FBFFF"
+# hover-col: "#F9CC26" #"#f97a26"
+# post-head-col: "#4FBFFF"
+# post-subhead-col: "#BBA2C7"
+# footer-col: "#1C1A2C"
+# footer-text-col: "#BBA2C7"
+# footer-link-col: "#4FBFFF"
 
 # Navbar settings
 navbar-links:
@@ -50,12 +54,22 @@ navbar-links:
 # Footer settings
 footer: Your Website
 
+author:
+  name: Charles Zhu
+
+timezone: "America/Toronto"
+
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
     url: https://twitter.com/ChenchongZ
   - title: github
     url: https://github.com/cczhu/
+
+social-network-links:
+  email: "chenchong.zhu@gmail.com"
+  github: cczhu
+  twitter: ChenchongZ
 
 # Build settings
 permalink: /:year-:month-:day-:title/

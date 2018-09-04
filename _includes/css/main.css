@@ -66,12 +66,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background-color: {{ site.hover-col }};
+  background-color: {{ site.color.hover }};
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background-color: {{ site.hover-col }};
+  background-color: {{ site.color.hover }};
 }
 
 .light {
@@ -385,6 +385,56 @@ hr.small {
 
 /*===================================================*/
 
+/* --- Footer --- */
+
+footer {
+  padding: 30px 0;
+  border-top: 0px #EAEAEA solid;
+  margin-top: 50px;
+  font-size: 14px;
+  background-color: {{ site.color.footer }};
+}
+
+footer p.text-muted {
+  color: {{ site.color.footer-text }};
+}
+
+footer a {
+  color: {{ site.color.footer-link }};
+}
+
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+footer .copyright {
+  font-family: {{ site.fonts.main }};
+  text-align: center;
+  margin-bottom: 0;
+}
+footer .theme-by {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    padding: 50px 0;
+  }
+  footer .footer-links {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  /*Need ul li a or all footer links get weird*/
+  footer ul li a {
+    margin: 0 11px 0;
+  }
+  footer .copyright {
+    font-size: 16px;
+  }
+}
+
 #header-gh-btns {
   margin-bottom: 15px;
 }
@@ -559,14 +609,6 @@ ul.banner-social-buttons li {
     }
 }
 
-footer {
-    padding: 50px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
@@ -610,13 +652,13 @@ body {
 
 .post-preview a {
   text-decoration: none;
-  color: {{ site.post-head-col }};
+  color: {{ site.color.post-head }};
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: {{ site.hover-col }};
+  color: {{ site.color.hover }};
 }
 
 .post-preview .post-title {
@@ -630,13 +672,13 @@ body {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: {{ site.post-subhead }};
+  color: {{ site.color.post-subhead }};
   font-size: 18px;
   font-style: italic;
   margin: 0 0 10px;
 }
 .post-preview .post-entry {
-  font-family: {{ site.headers }};
+  font-family: {{ site.fonts.main }};
   font-size: 17px;
   font-weight: 400;
 }
@@ -663,8 +705,8 @@ body {
   width: 192px;
 }
 .post-preview .post-read-more {
-  font-family: {{ site.headers }};
-  font-weight: 800;
+  font-family: {{ site.fonts.headers }};
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 768px) {

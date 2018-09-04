@@ -1,6 +1,44 @@
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+  <div class="container footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {% unless page.layout == 'homepage' %}
+        <ul class="list-inline text-center footer-links">
+          {%- for link in site.social-network-links -%}
+            {%- assign curkey = link[0] -%}
+            {%- assign element = site.data.SocialNetworks[curkey] -%}
+            <li>
+            {%- if curkey == 'rss' -%}
+              <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}">
+            {%- else -%}
+              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
+            {%- endif -%}
+                <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa {{ element.icon }} fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">{{ element.name }}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+        {% endunless %}
+      <p class="copyright text-muted">
+	      {{ site.author.name }}
+	      &nbsp;&bull;&nbsp;
+	      {{ site.time | date: '%Y' }}
+
+	      {% if site.url-pretty %}
+	      &nbsp;&bull;&nbsp;
+	      <a href="{{ site.url }}">{{ site.url-pretty }}</a>
+	      {% endif %}
+      </p>
+    <p class="theme-by text-muted">
+      Theme derived from
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a> and <a href="https://github.com/jeromelachaud/grayscale-theme">grayscale</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
