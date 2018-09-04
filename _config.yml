@@ -7,17 +7,20 @@ baseurl: ""
 description: "Personal website."
 
 # Color settings (hex-codes without the leading hash-tag)
+# Sort of based off of
+# https://color.adobe.com/Blue-Space-color-theme-1941412/edit/?copy=true&base=2&rule=Custom&selected=2&name=Copy%20of%20Blue%20Space&mode=rgb&rgbvalues=0.10980392156862745,0.10196078431372549,0.17254901960784313,0.1845248128720041,0.1836949610108547,0.27,0.4358358255727076,0.7917235546126449,1,0.7341530941575047,0.6345617824540357,0.78,0.9764705882352941,0.8,0.14901960784313725&swatchOrder=0,1,2,3,4
 color:
   primary-dark: "#2F2F45"
-  links: "#219ab3"
+  primary-darker: "#2B233D"
   navbar: "#1C1A2C"
   navbar-text: "#4FBFFF"  # hover/focus/active needs rgba, so manually change those to rgba(79, 191, 255, .2)
   navbar-title: "#F9CC26"
   navbar-blog: "#E4C3F4"
-  post-head: "#4FBFFF"
   post-subhead: "#E4C3F4"
   text: "#FFFFFF"
-  hover: "#F9CC26"
+  links: "#4FBFFF"
+  headers: "#4FBFFF"
+  hover: "#F9CC26"  # Except for picture links.
   code-block: "#49483E"
   footer: "#1C1A2C"
   footer-text: "#BBA2C7"
@@ -47,7 +50,7 @@ fonts:
 # Navbar settings
 navbar-links:
   About: "#about"
-  Download: "#download"
+  Projects: "#projects"
   Contact: "#contact"
   Blog: "/blog"
 
@@ -70,6 +73,14 @@ social-network-links:
   email: "chenchong.zhu@gmail.com"
   github: cczhu
   twitter: ChenchongZ
+
+# Manual display + ordering of projects.  TODO: figure out if we can just use the name rather than this redundant list
+projects:
+  DeepMoon: "deepmoon"
+  Baseband: "baseband"
+  Mergers: "mergers"
+  Borax: "mergers"
+  Mentax: "mergers"
 
 # Build settings
 permalink: /:year-:month-:day-:title/

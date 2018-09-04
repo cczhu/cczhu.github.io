@@ -1,4 +1,22 @@
 ---
-layout: homepage
+layout: base
+shortfooter: true
 title: Chenchong Charles Zhu
 ---
+
+{% include homeheader.html %}
+
+<!-- Pages can be located anywhere, though for neatness, keep them under ./homepagesections.  They must have "homepage: true" and id frontmatter.  pagecolor can be used to change the background color, though sadly liquid commands can't be used because of a limitatio with Jekyll -->
+
+{% for p in site.pages %}
+  {% if p.homepage %}
+	<div id="{{ p.id }}" class="container content-section text-center" style="background-color:{{ p.pagecolor }}">
+	    <div class="row">
+	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	            <h1>{{ p.title }}</h1>
+	            {{ p.content }}
+	        </div>
+	    </div>
+	</div>
+  {% endif %}
+{% endfor %}

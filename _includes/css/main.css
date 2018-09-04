@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: {{ site.fonts.headers }};
     letter-spacing: -1px;
     font-weight: 500;
+    color: {{ site.color.headers }};
 }
 
 p {
@@ -35,8 +36,8 @@ p {
 @media(min-width: 768px) {
     p {
         margin: 0 0 35px;
-        font-size: 20px;
         line-height: 1.6;
+        font-size: 19px;
     }
 }
 
@@ -50,7 +51,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #11505d;
+    color: {{ site.color.hover }};;
 }
 
 hr.small {
@@ -200,6 +201,8 @@ hr.small {
     }
 }
 
+/*========== Main splash page ============*/
+
 .homesplash {
     display: table;
     width: 100%;
@@ -215,19 +218,51 @@ hr.small {
     -o-background-size: cover;
 }
 
-/*========== Main splash page ============*/
+.homesplash .home-img-container {
+  position: relative;
+  max-width: 250px;
+  /*margin-top: -25px;*/
+}
+
+.homesplash .home-img-container .home-img {
+  width: 100%;
+  border-radius: 50%;
+  border:5px solid {{ site.color.headers }};
+}
 
 .homesplash .home-body {
     display: table-cell;
     vertical-align: middle;
+    padding-top: 30px;  /*Crude method to handle navbar*/
+    padding-left: 10px;
+    text-align: left;
 }
 
 .homesplash .home-body .brand-heading {
-    font-size: 40px;
+    color: {{ site.color.navbar-title }};
+    font-size:36px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
 }
 
-.homesplash .home-body .splash-text {
+.homesplash .home-body .brand-heading .make-yellow {
+  color: {{ site.color.navbar-title }};
+}
+
+.homesplash .home-body .brand-subheading {
     font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.homesplash .home-body .brand-subheading.make-smaller {
+    font-size: 15px;
+}
+
+.homesplash .home-body .address-text {
+    font-size: 14px;
+    padding-top: 8px;
 }
 
 @media(min-width: 768px) {
@@ -237,11 +272,20 @@ hr.small {
     }
 
     .homesplash .home-body .brand-heading {
-        font-size: 100px;
+      font-size: 50px;
     }
 
-    .homesplash .home-body .splash-text {
-        font-size: 25px;
+    .homesplash .home-body .brand-subheading {
+      font-size: 24px;
+    }
+
+    .homesplash .home-body .brand-subheading.make-smaller {
+      font-size: 18px;
+    }
+
+    .homesplash .home-body .address-text {
+      font-size: 16px;
+      padding-top: 15px;
     }
 }
 
@@ -319,6 +363,13 @@ hr.small {
 /*handles when header has image banner*/
 .header-section.has-img {
   text-shadow: 1px 1px 3px #000;
+}
+.header-section.has-img h1,
+.header-section.has-img h2,
+.header-section.has-img h3,
+.header-section.has-img h4,
+.header-section.has-img h5 {
+  color: {{ site.color.text }};
 }
 .header-section.has-img .intro-header {
   margin-bottom: 40px;
@@ -520,40 +571,132 @@ footer .theme-by {
 }
 
 .content-section {
-    padding-top: 100px;
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: {{ site.color.primary-dark }};
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+.content-section h1,
+.content-section h2,
+.content-section h3 {
+  margin-bottom: 35px;
 }
 
-#map {
+/*From Agency (https://github.com/y7kim/agency-jekyll-theme/blob/gh-pages/_includes/css/agency.css)*/
+
+#portfolio {
     width: 100%;
-    height: 200px;
-    margin-top: 100px;
+    padding-top:75px;
+}
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin-bottom: 15px;
+}
+
+#portfolio .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto 25px;
+    max-width: 300px;
+}
+
+#portfolio .portfolio-img-container {
+  position: relative;
+  background-color: #4FBFFF;
+  border-radius: 50%;
+}
+
+#portfolio .portfolio-img {
+  width: 100%;
+  border-radius: 50%;
+  border:5px solid {{ site.color.headers }};
+}
+
+#portfolio .portfolio-img:hover {
+  opacity: 0.7;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+/*Can also attempt the old overlay trick: https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+
+/*#portfolio .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background-color: #ffeba5;
+}
+
+#portfolio .portfolio-img-container:hover .overlay {
+  opacity: 0.7;
+}*/
+
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+}
+
+#portfolio .portfolio-item .portfolio-caption h3,
+#portfolio .portfolio-item .portfolio-caption h4 {
+    margin-bottom: 20px;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-size: 16px;
+    color: {{ site.color.text }};
 }
 
 @media(min-width: 768px) {
     .content-section {
-        padding-top: 200px;
+      padding-top: 150px;
+      padding-bottom: 150px;
     }
 
-    .download-section {
-        padding: 100px 0;
+    .content-section h1,
+    .content-section h2,
+    .content-section h3 {
+      margin-bottom: 50px;
     }
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
 
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
+#contactbuttons {
+    width: 100%;
+    padding-top:75px;
+}
+
+#contactbuttons .contact-item {
+    right: 0;
+    margin-bottom: 15px;
+    font-size:40px;
+}
+
+.social-links {
+  font-size: 30px;
+  padding: 100px;
+}
+
+@media(min-width: 768px) {
+  .social-links {
+    font-size: 30px;
+    padding: 100px;
+  }
 }
 
 .btn {
@@ -652,7 +795,7 @@ body {
 
 .post-preview a {
   text-decoration: none;
-  color: {{ site.color.post-head }};
+  color: {{ site.color.headers }};
 }
 
 .post-preview a:focus,
@@ -665,6 +808,7 @@ body {
   font-size: 30px;
   margin-top: 0;
 }
+
 .post-preview .post-subtitle {
   margin: 0;
   font-weight: 400;
