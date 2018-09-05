@@ -586,7 +586,7 @@ footer .theme-by {
 .content-section h3 {
   padding-top: 10%;
   margin-bottom: 35px;
-  color: {{ site.color.headers }};
+  /*color: {{ site.color.headers }};*/  /*confusing to have both links and titles in blue!*/
 }
 
 /*From Agency (https://github.com/y7kim/agency-jekyll-theme/blob/gh-pages/_includes/css/agency.css)*/

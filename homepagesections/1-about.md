@@ -4,22 +4,18 @@ homepage: true
 id: about
 ---
 
-I research white dwarfs, the remnants of Sun-like stars left behind after
-they've exhausted their nuclear fuel.  Specifically, I investigate mergers of
-two carbon-oxygen white dwarfs to determine if and how they produce type Ia
-supernovae, the most powerful thermonuclear explosions in the universe.  While
-supernovae are a hundred million times brighter than the Sun, white dwarf
-themselves are incredibly faint, preventing direct observation of phenomena 
-such as mergers by even the most powerful telescopes.  This makes computer 
-simulations one of our most potent tool for understanding merger physics and 
-post-merger evolution.
+I'm a data science fellow at the [Insight Data Science](https://www.insightdatascience.com/)
+Toronto program.
 
-My work has utilized 3D hydrodynamic simulations to explore how properties of
-the merged object, or "merger remnant", depend on the masses of the two merging
-white dwarfs.  I have also examined how shear flows within the merger rapidly
-generate powerful magnetic fields through magnetic dynamo action.  The
-temperature and rotational profiles of the merger remnant, as well as the
-presence of a magnetic field, shape the post-merger evolution of the remnant.
-I am currently working with 1D semi-analytical models of this evolution to
-quantify the influence of rotation and magnetic fields, and identify the
-conditions that lead to an explosion.
+My background is astrophysics.  I completed my PhD at the [University of
+Toronto Astronomy Department](http://www.astro.utoronto.ca/) with [Prof. Marten van
+Kerkwijk](http://astro.utoronto.ca/~mhvk/) on whether two white dwarf stars
+colliding together can set off an explosion. Following graduation, I worked as
+a postdoc to develop radio telescope data analysis software for the
+Department's pulsar astronomers, and helped create a deep learning-based
+impact crater detector with its planetary scientists.
+
+Aside from work and research, I'm an
+[avid amateur photographer](https://www.flickr.com/photos/115470406@N08/), and
+connect with my astronomy roots by working in public outreach with
+[universe.utoronto.ca](https://universe.utoronto.ca/).
