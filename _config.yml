@@ -94,6 +94,7 @@ exclude:
   - LICENSE
   - README.md
   - jekyll_notes.md
+  - to_do.md
 
 # Plugins
 plugins:
