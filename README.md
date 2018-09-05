@@ -1,6 +1,11 @@
 cczhu.github.io
 ===============
 
+
+Welcome to the repository for my personal webpage. [cczhu.github.io/]
+(https://cczhu.github.io/)!  This Jekyll site is forked from [Jerome Lachaud's port]
+(https://github.com/jeromelachaud/grayscale-theme)
+
 Personal website, based on [Jerome Lachaud's port]
 (https://github.com/jeromelachaud/grayscale-theme) of the [Grayscale Jekyll
 theme](http://ironsummitmedia.github.io/startbootstrap-grayscale/).
