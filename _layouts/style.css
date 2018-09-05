@@ -2,5 +2,6 @@
 leads to weird compatibility issues*/
 
 {% include css/bootstrap.min.css %}
+{% include css/bootstrap-social.css %}
 {% include css/monokai.highlight.style.css %}
 {% include css/main.css %}

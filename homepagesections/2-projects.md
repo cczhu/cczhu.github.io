@@ -5,8 +5,8 @@ id: projects
 pagecolor: "#2a283d"
 ---
 
-For a full list of my publications, please see
-[my ArXiv page](https://arxiv.org/a/zhu_c_2.html).
+Here's a selection of projects I've had the pleasure to be part of.  For a full
+list of my publications, please see [my ArXiv page](https://arxiv.org/a/zhu_c_2.html).
 
 <!-- based off of the portfolio section in Agency
 https://github.com/y7kim/agency-jekyll-theme/blob/gh-pages/_includes/portfolio_grid.html -->
