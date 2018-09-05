@@ -8,12 +8,12 @@ Please feel free to reach out to me!
 
 <div id="contactbuttons" class="container">
 <div class="row">
-<div class="col-sm-8 col-sm-offset-2">
+<div class="col-sm-6 col-sm-offset-3">
   <div class="row">
   {% for link in site.social-network-links %}
     {% assign curkey = link[0] %}
     {% assign element = site.data.SocialNetworks[curkey] %}
-    <div class="col-xs-4 contact-item">
+    <div class="col-sm-4 contact-item">
     {% if curkey == 'rss' %}
       <a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ element.name }}">
     {% else %}

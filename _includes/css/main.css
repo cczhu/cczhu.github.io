@@ -51,7 +51,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: {{ site.color.hover }};;
+    color: {{ site.color.hover }};
 }
 
 hr.small {
@@ -569,15 +569,19 @@ footer .theme-by {
     }
 }
 
+.content-background-colour {
+	width: 100%;
+}
+
 .content-section {
-    width: 100%;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    min-height: 100vh;
+    padding-bottom: 75px;  /*For handling cellphone heights.*/
 }
 
 .content-section h1,
 .content-section h2,
 .content-section h3 {
+  padding-top: 15%;
   margin-bottom: 35px;
 }
 
@@ -585,7 +589,8 @@ footer .theme-by {
 
 #portfolio {
     width: 100%;
-    padding-top:75px;
+    padding-top:5%;
+    padding-bottom:10%;
 }
 
 #portfolio .portfolio-item {
@@ -660,11 +665,6 @@ footer .theme-by {
 }
 
 @media(min-width: 768px) {
-    .content-section {
-      padding-top: 150px;
-      padding-bottom: 150px;
-    }
-
     .content-section h1,
     .content-section h2,
     .content-section h3 {
@@ -677,13 +677,13 @@ footer .theme-by {
 
 #contactbuttons {
     width: 100%;
-    padding-top:75px;
+    padding-top:50px;
 }
 
 #contactbuttons .contact-item {
     right: 0;
     margin-bottom: 15px;
-    font-size:40px;
+    font-size:32px;
 }
 
 .social-links {
@@ -856,6 +856,11 @@ body {
   .post-preview .post-title {
     font-size: 32px;
   }
+	.post-preview a:focus,
+	.post-preview a:hover {
+	  text-decoration: none;
+	  color: {{ site.color.hover }};
+	}
 }
 
 /* --- Blog Tags --- */

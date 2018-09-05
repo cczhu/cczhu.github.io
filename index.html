@@ -10,13 +10,15 @@ title: Chenchong Charles Zhu
 
 {% for p in site.pages %}
   {% if p.homepage %}
-	<div id="{{ p.id }}" class="container content-section text-center" style="background-color:{{ p.pagecolor }}">
+  	<div class="content-background-colour" style="background-color:{{ p.pagecolor }}">
+	<div id="{{ p.id }}" class="container content-section text-center">
 	    <div class="row">
 	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	            <h1>{{ p.title }}</h1>
 	            {{ p.content }}
 	        </div>
 	    </div>
+	</div>
 	</div>
   {% endif %}
 {% endfor %}
