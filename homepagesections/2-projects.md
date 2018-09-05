@@ -2,7 +2,7 @@
 title: Projects
 homepage: true
 id: projects
-pagecolor: "#2B233D"
+pagecolor: "#2a283d"
 ---
 
 For a full list of my publications, please see
@@ -20,12 +20,12 @@ https://github.com/y7kim/agency-jekyll-theme/blob/gh-pages/_includes/portfolio_g
             <a href="{{ cproj.url }}" class="portfolio-link" data-toggle="modal">
                 <div class="portfolio-img-container">
                 <img src="{{ cproj.img }}" class="portfolio-img img-responsive img-centered" alt="">
-                  <div class="overlay"></div>
+<!--                   <div class="overlay"></div> -->
                 </div>
             </a>
             <div class="portfolio-caption">
                 <h3>{{ cproj.name }}</h3>
-                <p class="text-muted">{{ cproj.desc }}</p>
+                <p>{{ cproj.desc }}</p>
             </div>
         </div>
     {% endfor %}

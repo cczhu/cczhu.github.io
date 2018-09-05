@@ -4,8 +4,7 @@ deepmoon:
   name: "DeepMoon"
   url: "https://github.com/silburt/DeepMoon"
   desc: "Convnet for detecting craters on the Moon"
-  # img: "/img/projects/deepmoon.jpg"
-  img: "img/ARO.jpg"
+  img: "/img/projects/DeepMoonButton.jpg"
 
 scintillometry:
   name: "Scintillometry"
@@ -17,12 +16,10 @@ baseband:
   name: "Baseband"
   url: "https://github.com/mhvk/baseband"
   desc: "Radio data format decoder and converter"
-  # img: "/img/projects/baseband.jpg"
-  img: "img/ARO.jpg"
+  img: "img/projects/AROButton.jpg"
 
 mergers:
   name: "White Dwarf Mergers"
   url: "https://reddit.com/u/"
   desc: "Thesis work investingating the outcome of merging white dwarf stars"
-  # img: "/img/projects/mergers.jpg"
-  img: "img/ARO.jpg"
+  img: "img/projects/MergersButton.jpg"

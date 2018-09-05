@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: {{ site.fonts.headers }};
     letter-spacing: -1px;
     font-weight: 500;
-    color: {{ site.color.headers }};
+/*    Putting a colour here overrides all colour assignments inside divs, for some reason...*/
 }
 
 p {
@@ -210,7 +210,7 @@ hr.small {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(/img/ARO.jpg) no-repeat center center scroll;
+    background: url(/img/website_viridis_processed.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-dark }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -377,6 +377,9 @@ hr.small {
   box-shadow: 1px 1px 3px #000;
   -webkit-box-shadow: 1px 1px 3px #000;
   -moz-box-shadow: 1px 1px 3px #000;
+}
+.header-section.no-img .page-heading hr {
+	color: {{ site.color.page-header }};
 }
 /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
 .header-section.has-img .intro-header.no-img {
@@ -569,20 +572,21 @@ footer .theme-by {
     }
 }
 
-.content-background-colour {
+.content-background {
 	width: 100%;
+	min-height: 100vh;
 }
 
 .content-section {
-    min-height: 100vh;
-    padding-bottom: 75px;  /*For handling cellphone heights.*/
+    padding-bottom: 10%;  /*For handling cellphone heights.*/
 }
 
 .content-section h1,
 .content-section h2,
 .content-section h3 {
-  padding-top: 15%;
+  padding-top: 10%;
   margin-bottom: 35px;
+  color: {{ site.color.headers }};
 }
 
 /*From Agency (https://github.com/y7kim/agency-jekyll-theme/blob/gh-pages/_includes/css/agency.css)*/
@@ -595,20 +599,21 @@ footer .theme-by {
 
 #portfolio .portfolio-item {
     right: 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 #portfolio .portfolio-link {
     display: block;
     position: relative;
-    margin: 0 auto 25px;
-    max-width: 300px;
+    margin: 0 auto;
+    max-width: 200px;
 }
 
 #portfolio .portfolio-img-container {
   position: relative;
-  background-color: #4FBFFF;
+  background-color: {{ site.color.links }};
   border-radius: 50%;
+  margin-bottom: -10px;
 }
 
 #portfolio .portfolio-img {
@@ -648,14 +653,13 @@ footer .theme-by {
 
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
-    padding: 25px;
     max-width: 400px;
     text-align: center;
 }
 
 #portfolio .portfolio-item .portfolio-caption h3,
 #portfolio .portfolio-item .portfolio-caption h4 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
