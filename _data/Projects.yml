@@ -20,6 +20,6 @@ baseband:
 
 mergers:
   name: "White Dwarf Mergers"
-  url: "http://www.astro.utoronto.ca/theses/thesis16.zhu.pdf"
-  desc: "Computer simulations of the outcome of merging white dwarf stars (.pdf)"
+  url: "/2018-09-05-phd-research/"
+  desc: "Computer simulations of the outcome of merging white dwarf stars"
   img: "img/projects/MergersButton.jpg"
