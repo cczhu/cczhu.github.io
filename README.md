@@ -1,19 +1,14 @@
 cczhu.github.io
 ===============
 
-
 Welcome to the repository for my personal webpage. [cczhu.github.io/]
-(https://cczhu.github.io/)!  This Jekyll site is forked from [Jerome Lachaud's port]
-(https://github.com/jeromelachaud/grayscale-theme)
+(https://cczhu.github.io/)!  This Jekyll site is forked from
+[Jerome Lachaud's port](https://github.com/jeromelachaud/grayscale-theme) of the 
+[Grayscale bootstrap theme](http://ironsummitmedia.github.io/startbootstrap-grayscale/),
+but it is actually a combination of that theme and Dean Attali's
+[Beautiful Jekyll theme](https://deanattali.com/beautiful-jekyll/).  I definitely
+recommend the latter to anyone looking to start a website without all the HTML/CSS/Jekyll
+hassle!
 
-Personal website, based on [Jerome Lachaud's port]
-(https://github.com/jeromelachaud/grayscale-theme) of the [Grayscale Jekyll
-theme](http://ironsummitmedia.github.io/startbootstrap-grayscale/).
-
-
-https://www.jekyllstuff.com/theme/personal-jekyll-theme.html
-https://www.jekyllstuff.com/theme/instagram-portfolio-jekyll-theme.html
-https://www.jekyllstuff.com/theme/sleek-blog-jekyll-theme.html
-https://www.jekyllstuff.com/theme/jalpc-jekyll-theme.html
-https://jekyllthemes.io/theme/grayscale-theme
-https://jekyllthemes.io/theme/agency-jekyll-theme
+Code was also derived from y7kim's [Agency Theme bootstrap port](https://github.com/y7kim/agency-jekyll-theme),
+and Tim O'Brien's [Single Paged theme](http://t413.com/SinglePaged/).
