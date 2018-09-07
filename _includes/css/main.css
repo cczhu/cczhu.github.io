@@ -221,7 +221,7 @@ hr.small {
 .homesplash .home-img-container {
   position: relative;
   max-width: 250px;
-  /*margin-top: -25px;*/
+  margin-top: -15px;
 }
 
 .homesplash .home-img-container .home-img {
