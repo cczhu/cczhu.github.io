@@ -1,5 +1,11 @@
 # Some projects I've done.
 
+snapassist:
+  name: "SnapAssist"
+  url: "https://github.com/cczhu/snapassist"
+  desc: "WebApp for photography viewpoint discovery"
+  img: "/img/projects/SnapAssistButton.jpg"
+
 deepmoon:
   name: "DeepMoon"
   url: "https://github.com/silburt/DeepMoon"
