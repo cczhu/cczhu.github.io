@@ -49,6 +49,7 @@ timezone: "America/Toronto"
 social-network-links:
   email: "chenchong.zhu@gmail.com"
   github: cczhu
+  linkedin: chenchongzhu
   twitter: ChenchongZ
 
 # Manual display + ordering of projects.  TODO: figure out if we can just use the name rather than this redundant list

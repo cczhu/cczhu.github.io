@@ -16,6 +16,6 @@ for the Department's pulsar astronomers, and helped create a deep learning-based
 [impact crater detector](https://github.com/silburt/DeepMoon) with its planetary scientists.
 
 Aside from work and research, I'm an
-[avid amateur photographer](https://www.flickr.com/photos/115470406@N08/), and
-connect with my astronomy roots by working in public outreach with
-[universe.utoronto.ca](https://universe.utoronto.ca/).
+[avid amateur photographer](https://www.flickr.com/photos/115470406@N08/),
+[occasional digital painter](https://charlessketchstream.tumblr.com/), and a
+public outreach facilitator with [universe.utoronto.ca](https://universe.utoronto.ca/).

@@ -33,12 +33,7 @@ project's files.
 
 ## Tutorials
 
- - [Giraffe Academy](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB)
-
+- [Giraffe Academy](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB)
 - Quick start:
-    - jekyll new myblog
-    - bundle exec jekyll serve --livereload
-
-
-https://github.com/t413/SinglePaged/
-https://github.com/jeromelachaud/grayscale-theme
+    1. `jekyll new myblog`
+    2. `bundle exec jekyll serve --livereload`
