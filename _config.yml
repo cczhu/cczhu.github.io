@@ -55,6 +55,7 @@ social-network-links:
 # Manual display + ordering of projects.  TODO: figure out if we can just use the name rather than this redundant list
 projects:
   SnapAssist: "snapassist"
+  OpenData: "opendata"
   DeepMoon: "deepmoon"
   Baseband: "baseband"
   Mergers: "mergers"

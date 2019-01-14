@@ -6,6 +6,12 @@ snapassist:
   desc: "WebApp for photography viewpoint discovery"
   img: "/img/projects/SnapAssistButton.jpg"
 
+opendata:
+  name: "Toronto & Ontario Open Data"
+  url: "https://cczhu.github.io/OpenDataToronto/"
+  desc: "Analytics with Toronto and Ontario open data"
+  img: "/img/projects/OpenDataButton.jpg"
+
 deepmoon:
   name: "DeepMoon"
   url: "https://github.com/silburt/DeepMoon"
